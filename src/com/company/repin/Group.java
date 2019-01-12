@@ -16,13 +16,17 @@ public class Group {
         return groupName;
     }
 
+    public List<Student> getGroupOfStudents() {
+        return groupOfStudents;
+    }
+
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
 
     public Map<String, Boolean> listOfPresense() {
         if (listOfPresence.isEmpty()) {
-            System.out.println("You should add student and create SpisokGrupi first");
+            System.out.println("You should add student and create list of presence first");
         }
         return listOfPresence;
     }
@@ -46,7 +50,7 @@ public class Group {
 
     private boolean isPresent() {
         Random rnd = new Random();
-        return rnd.nextInt(10) <= 7;
+        return rnd.nextInt(10) <= 8;
     }
 
     public Map<String, Boolean> createlistOfPrecence() {

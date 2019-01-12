@@ -5,9 +5,11 @@ import java.util.Random;
 public class GroupCreator {
 
     private static String[] MALE_NAMES = {"Vasya", "Petya", "Yura", "Sergey", "Fedor", "Misha"};
-    private static String[] MALE_SURNAMES = {"Ivanov", "Ivanenko", "Petrenko", "Osadcev", "Freeman", "Glazenko", "Grina"};
-    private static String[] FEMALE_NAMES = {"Katya", "Nastya", "Olga", "Ira", "Gadya"};
-    private static String[] FEMALE_SURNAMES = {"Ivanova", "Ivanenko", "Ostapenko", "Galushko", "Kirienko", "Trempel"};
+    private static String[] MALE_SURNAMES = {"Ivanov", "Ivanenko", "Petrenko", "Osadcev", "Freeman", "Glazenko",
+            "Grina", "Proshorov", "Chub", "Ostapenko"};
+    private static String[] FEMALE_NAMES = {"Katya", "Nastya", "Olga", "Ira", "Gadya", "Sveta", "Marta"};
+    private static String[] FEMALE_SURNAMES = {"Ivanova", "Ivanenko", "Ostapenko", "Galushko", "Kirienko", "Trempel",
+    "Petrova", "Vinnichenko", "Gaeva"};
 
     private static Student createStudent() {
         Student student = new Student();
