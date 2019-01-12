@@ -7,7 +7,7 @@ public class Professor {
     private String name;
     private String subject;
 
-    public Professor() {
+    Professor() {
     }
 
     public Professor(String name, String subject) {
@@ -15,14 +15,17 @@ public class Professor {
         this.subject = subject;
     }
 
+    private Map<LocalDateTime, Map> listPosesheniy = new HashMap<>();
 
-    Map<LocalDateTime, Map> listPosesheniy = new HashMap<>();
+    public Map<LocalDateTime, Map> getListPosesheniy() {
+        return listPosesheniy;
+    }
 
     public void pereklichka(Group group) {
         group.createlistOfPrecence();
-        if (name!=null && subject!=null)
-        System.out.println("Proffessor of " + subject + " " + name+ " is about to check presence of students of group "
-                + group.getGroupName());
+        if (name != null && subject != null)
+            System.out.println("Proffessor of " + subject + " " + name + " is about to check presence of students of group "
+                    + group.getGroupName());
         else System.out.println("Proffessor is about to check presence of students of group ");
         listPosesheniy.put(LocalDateTime.now(), group.listOfPresense());
         for (String name : group.listOfPresense().keySet()) {

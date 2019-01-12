@@ -8,7 +8,7 @@ public class Group {
     private Student starosta;
     private Map<String, Boolean> listOfPresence = new HashMap<>();
 
-    public Group(String groupName) {
+    Group(String groupName) {
         this.groupName = groupName;
     }
 
@@ -46,15 +46,14 @@ public class Group {
 
     private boolean isPresent() {
         Random rnd = new Random();
-        if (rnd.nextInt(10) > 7) return false;
-        return true;
+        return rnd.nextInt(10) <= 7;
     }
 
     public Map<String, Boolean> createlistOfPrecence() {
         for (Student stud : groupOfStudents) {
             listOfPresence.put(stud.getName(), isPresent());
         }
-        System.out.println("List of  students presence of group - "+groupName+" for today were created");
+        System.out.println("List of  students presence of group - " + groupName + " for today were created");
         return listOfPresence;
     }
 
