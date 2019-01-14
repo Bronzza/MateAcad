@@ -31,9 +31,9 @@ public class Professor {
         for (Student student : group.getGroupOfStudents()) {
             System.out.println("Is " + student.getName() + " present?");
             if (group.listOfPresense().get(student.getName()))
-                System.out.println(student.getName() + " is here!");
+                System.out.println(student.getName() + " is here");
             else
-                System.out.println(student.getName().toUpperCase() + " is absent");
+                System.out.println(student.getName().toUpperCase() + " is absent!");
         }
 
     }
